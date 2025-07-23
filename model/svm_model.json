@@ -1,0 +1,11 @@
+{
+  "weights": {
+    "length": 0.002,
+    "count_at": 1.5,
+    "count_dash": 0.8,
+    "count_doubleSlash": 0.5,
+    "suspicious_word_count": 2.0,
+    "has_https": -1.2
+  },
+  "bias": -3.0
+}
