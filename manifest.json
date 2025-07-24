@@ -1,20 +1,35 @@
 {
   "manifest_version": 3,
-  "name": "Phishing Detector",
+  "name": "Phishing Detector MVP",
   "version": "1.0",
-  "permissions": ["tabs", "webRequest", "webRequestBlocking", "storage", "notifications"],
-  "host_permissions": ["<all_urls>"],
+  "description": "Deteksi URL phishing secara real-time dan blokir akses berbahaya.",
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icons/icon.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content_script.js"]
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
     }
-  ]
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
 }
